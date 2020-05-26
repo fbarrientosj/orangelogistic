@@ -10,8 +10,7 @@ import About from './Components/About';
 
 const { GoogleSpreadsheet } = require('google-spreadsheet');
 const { Header, Content, Footer } = Layout;
-
-
+const key = {'sheet': process.env.REACT_APP_1_API_KEY, encryption:  process.env.REACT_APP_2_API_KEY};
 function App() {
 
   const [view, setview] = useState('about');
@@ -35,8 +34,8 @@ function App() {
       </Breadcrumb>
       <div className="site-layout-background" style={{ padding: 24, minHeight: 380 }}>
         {view === 'about' ? <About></About> : ''}
-        {view === 'signin' ? <DeliveryForm></DeliveryForm> : ''}
-        {view === 'delivery' ? <RegisterForm></RegisterForm> : ''}
+        {view === 'signin' ? <DeliveryForm {...key}></DeliveryForm> : ''}
+        {view === 'delivery' ? <RegisterForm {...key}></RegisterForm> : ''}
   
       </div>
     </Content>

@@ -25,8 +25,8 @@ const tailLayout = {
 
  
 
-const Demo = () => {
-
+const Demo = (key) => {
+  
     const [passwordError, setError] = useState(false);
     const [loading, setloading] = useState(false);
 
@@ -47,7 +47,7 @@ const Demo = () => {
     async function passwordVerification(mail, password) {
     
     var creds = require('../client_secret.json');
-    var doc = new GoogleSpreadsheet('17ilHExxFApL7Y7_dNn_WQkbbLII78xqjuwYndaHISeE');
+    var doc = new GoogleSpreadsheet(key.sheet);
     await doc.useServiceAccountAuth(creds);
     await doc.loadInfo(); // loads document properties and worksheets
     
@@ -56,7 +56,7 @@ const Demo = () => {
     const rows = await sheet.getRows();
     var success = false
     rows.forEach(row => {
-        if (CryptoAES.decrypt(row.password, 'OrangeBussiness').toString(CryptoENC) == CryptoAES.decrypt(password, 'OrangeBussiness').toString(CryptoENC) && row.mail == mail){
+        if (CryptoAES.decrypt(row.password, key.encryption).toString(CryptoENC) == CryptoAES.decrypt(password, key.encryption).toString(CryptoENC) && row.mail == mail){
             success = true;
         }}
     )
@@ -69,7 +69,7 @@ const Demo = () => {
 
     setloading(true);
     var creds = require('../client_secret.json');
-    var doc = new GoogleSpreadsheet('17ilHExxFApL7Y7_dNn_WQkbbLII78xqjuwYndaHISeE');
+    var doc = new GoogleSpreadsheet(key.sheet);
     await doc.useServiceAccountAuth(creds);
     await doc.loadInfo(); // loads document properties and worksheets
     var pass = CryptoAES.encrypt(values.password, 'OrangeBussiness').toString();

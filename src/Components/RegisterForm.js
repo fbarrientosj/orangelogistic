@@ -132,20 +132,21 @@ const tailFormItemLayout = {
   },
 };
 
-const RegistrationForm = () => {
+const RegistrationForm = (key) => {
   const [form] = Form.useForm();
   const [loading, setloading] = useState(false);
 
   const onFinish = async values => {
     setloading(true);
     var creds = require('../client_secret.json');
-    var doc = new GoogleSpreadsheet('17ilHExxFApL7Y7_dNn_WQkbbLII78xqjuwYndaHISeE');
+    
+    
+    var doc = new GoogleSpreadsheet(key.sheet);
     await doc.useServiceAccountAuth(creds);
     await doc.loadInfo(); // loads document properties and worksheets
-    console.log(doc.title); 
     const sheet = doc.sheetsByIndex[1];
     let direccion = values.residencia.join('-')
-    var pass = CryptoAES.encrypt(values.password, 'OrangeBussiness').toString();
+    var pass = CryptoAES.encrypt(values.password, key.encryption).toString();
     const larryRow = await sheet.addRow({ nombre: values.nombre, mail: values.mail.toLowerCase(),
         apellido: values.apellido, residencia: direccion, celular: values.celular,
          password: pass, creacion: moment().format('DD-MM-YYYY')});
