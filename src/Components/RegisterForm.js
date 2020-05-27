@@ -241,7 +241,7 @@ const RegistrationForm = (key) => {
       > 
       
         <AutoComplete options={websiteOptions} onChange={onWebsiteChange} >
-          <Input suffix='😊'/>
+          <Input suffix='📧'/>
         </AutoComplete>
     
       </Form.Item>
@@ -320,25 +320,6 @@ const RegistrationForm = (key) => {
         />
       </Form.Item>
 
-      
-
-      
-
-      <Form.Item
-        name="agreement"
-        valuePropName="checked"
-        rules={[
-          {
-            validator: (_, value) =>
-              value ? Promise.resolve() : Promise.reject('Should accept agreement'),
-          },
-        ]}
-        {...tailFormItemLayout}
-      >
-        <Checkbox>
-          I have read the <a href="">agreement</a>
-        </Checkbox>
-      </Form.Item>
       <Form.Item {...tailFormItemLayout}>
         <Button type="primary" htmlType="submit">
           Register

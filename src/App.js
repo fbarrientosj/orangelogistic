@@ -28,7 +28,7 @@ function App() {
     <Content className="site-layout" style={{ padding: '0 50px', marginTop: 64 }}>
       <Breadcrumb style={{ margin: '16px 0' }}>
       
-        {view === 'about' ? <Breadcrumb.Item>Te explicamos en breves pasos que hacemos 🍊 🍊 🍊</Breadcrumb.Item> : ''}
+        {view === 'about' ? <Breadcrumb.Item></Breadcrumb.Item> : ''}
         {view === 'signin' ?<Breadcrumb.Item>Regístrate y comienza a vender</Breadcrumb.Item> : ''}
         {view === 'delivery' ? <Breadcrumb.Item>Recuerda que tienes que estar registrado para hacer un pedido!</Breadcrumb.Item> : ''}
       </Breadcrumb>
@@ -39,7 +39,7 @@ function App() {
   
       </div>
     </Content>
-    <Footer style={{ textAlign: 'center' }}>Footer</Footer>
+    <Footer style={{ textAlign: 'center' }}>Cualquier duda mándame un whatsapp +56965688057 😊</Footer>
 
   </Layout>
   
