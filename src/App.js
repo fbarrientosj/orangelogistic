@@ -10,7 +10,7 @@ import About from './Components/About';
 
 const { GoogleSpreadsheet } = require('google-spreadsheet');
 const { Header, Content, Footer } = Layout;
-const key = {'sheet': process.env.REACT_APP_1_API_KEY, encryption:  process.env.REACT_APP_2_API_KEY};
+const key = {'sheet': process.env.REACT_APP_1_API_KEY, 'encryption':  process.env.REACT_APP_2_API_KEY};
 function App() {
 
   const [view, setview] = useState('about');

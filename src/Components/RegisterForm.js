@@ -135,23 +135,23 @@ const tailFormItemLayout = {
 const RegistrationForm = (key) => {
   const [form] = Form.useForm();
   const [loading, setloading] = useState(false);
+  const [success, setsuccess] = useState(false);
 
   const onFinish = async values => {
+    setsuccess(false);
     setloading(true);
-    var creds = require('../client_secret.json');
-    
-    
+    var creds = require('../client_secret.json');  
     var doc = new GoogleSpreadsheet(key.sheet);
     await doc.useServiceAccountAuth(creds);
     await doc.loadInfo(); // loads document properties and worksheets
     const sheet = doc.sheetsByIndex[1];
     let direccion = values.residencia.join('-')
-    var pass = CryptoAES.encrypt(values.password, key.encryption).toString();
+    var pass = CryptoAES.encrypt(values.password, 'a').toString();
     const larryRow = await sheet.addRow({ nombre: values.nombre, mail: values.mail.toLowerCase(),
         apellido: values.apellido, residencia: direccion, celular: values.celular,
          password: pass, creacion: moment().format('DD-MM-YYYY')});
     setloading(false);
-    
+    setsuccess(true);
   };
 
   const prefixSelector = (
@@ -319,9 +319,9 @@ const RegistrationForm = (key) => {
           }}
         />
       </Form.Item>
-
+      <b style={{color:'green'}} class='centered' >{success ? 'Cuenta creada con éxito' : ''}</b> 
       <Form.Item {...tailFormItemLayout}>
-        <Button type="primary" htmlType="submit">
+        <Button type="primary" htmlType="submit" >
           Register
         </Button>
       </Form.Item>

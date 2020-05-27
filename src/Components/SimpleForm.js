@@ -29,6 +29,7 @@ const Demo = (key) => {
   
     const [passwordError, setError] = useState(false);
     const [loading, setloading] = useState(false);
+    const [success, setsuccess] = useState(false);
 
     const [autoCompleteResult, setAutoCompleteResult] = useState([]);
     const onWebsiteChange = value => {
@@ -54,9 +55,11 @@ const Demo = (key) => {
     const sheet = doc.sheetsByIndex[1];
     
     const rows = await sheet.getRows();
-    var success = false
+    var success = false;
+    console.log('HOLA')
     rows.forEach(row => {
-        if (CryptoAES.decrypt(row.password, key.encryption).toString(CryptoENC) == CryptoAES.decrypt(password, key.encryption).toString(CryptoENC) && row.mail == mail){
+      console.log(row.password, password)
+        if (CryptoAES.decrypt(row.password, 'a').toString(CryptoENC) == CryptoAES.decrypt(password, 'a').toString(CryptoENC) && row.mail == mail){
             success = true;
         }}
     )
@@ -66,7 +69,7 @@ const Demo = (key) => {
   
 
   const onFinish = async values => {
-
+    setsuccess(false);
     setloading(true);
     var creds = require('../client_secret.json');
     var doc = new GoogleSpreadsheet(key.sheet);
@@ -81,8 +84,10 @@ const Demo = (key) => {
         retiro: values.retiro.format('DD-MM-YYYY'), fecha: moment().format('DD-MM-YYYY')});
     console.log('Success:', values);
     setError(false);
+    setsuccess(true);
     } else {
         setError(true);
+        setsuccess(false);
     }
     setloading(false);
   };
@@ -176,7 +181,7 @@ const Demo = (key) => {
         <Input.Password />
       </Form.Item>
       <b style={{color:'red'}} >{passwordError ? 'Contraseña o nombre erróneo' : ''}</b> 
-      
+      <b style={{color:'green'}} class='centered' >{success ? 'Pedido creado con éxito' : ''}</b> 
       <Form.Item {...tailLayout}>
         <Button type="primary" htmlType="submit" style={{ textAlign: 'center' }}>
           Submit

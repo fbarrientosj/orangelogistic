@@ -7,30 +7,10 @@ const About = () => {
 
     return (
   <div id="container">
-    <h1>Cómo ganar vendiendo naranjas?</h1>
-    <div id="first">
-      <motion.div
-      className="container"
-      whileHover={{ scale: 1.2, rotate: 90 }}
-      whileTap={{ scale: 0.8, rotate: -90, borderRadius: "100%" }}
-    />
-    <p> </p>
-    <motion.div
-      className="container"
-      whileHover={{ scale: 1.2, rotate: 90 }}
-      whileTap={{ scale: 0.8, rotate: -90, borderRadius: "100%" }}
-    />
-    <p> </p>
-    <motion.div
-      className="container"
-      whileHover={{ scale: 1.2, rotate: 90 }}
-      whileTap={{ scale: 0.8, rotate: -90, borderRadius: "100%" }}
-    />
     
-    </div>
-
-    <div id="second">
-      
+      <h1>Cómo ganar vendiendo naranjas?</h1>
+      <hr></hr>
+      <br></br>
       <Timeline pending="Ganando 🤑 " >
 
         <Timeline.Item color='red'>Créate una cuenta</Timeline.Item>
@@ -43,7 +23,6 @@ const About = () => {
         (en un máximo de</p>
         <p>7 días después del retiro de la fruta)</p> </Timeline.Item>
       </Timeline>
-    </div>
     </div>
     )};
 
