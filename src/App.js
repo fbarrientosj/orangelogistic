@@ -21,8 +21,8 @@ function App() {
       <div className="logo" />
       <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']}>
         <Menu.Item onClick={() => setview('about')} key="1">About</Menu.Item>
-        <Menu.Item onClick={() => setview('signin')} key="2">Regístrate como vendedor</Menu.Item>
-        <Menu.Item onClick={() => setview('delivery')} key="3">Haz un pedido</Menu.Item>
+        <Menu.Item onClick={() => setview('signin')} key="2">Haz un pedido</Menu.Item>
+        <Menu.Item onClick={() => setview('delivery')} key="3">Regístrate como vendedor</Menu.Item>
       </Menu>
     </Header>
     <Content className="site-layout" style={{ padding: '0 50px', marginTop: 64 }}>
