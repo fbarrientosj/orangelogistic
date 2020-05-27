@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/orangelogistic/static/css/main.3f9d681b.chunk.css",
+    "main.js": "/orangelogistic/static/js/main.787cd35a.chunk.js",
+    "main.js.map": "/orangelogistic/static/js/main.787cd35a.chunk.js.map",
+    "runtime-main.js": "/orangelogistic/static/js/runtime-main.4c88ba1e.js",
+    "runtime-main.js.map": "/orangelogistic/static/js/runtime-main.4c88ba1e.js.map",
+    "static/js/2.81c93c2d.chunk.js": "/orangelogistic/static/js/2.81c93c2d.chunk.js",
+    "static/js/2.81c93c2d.chunk.js.map": "/orangelogistic/static/js/2.81c93c2d.chunk.js.map",
+    "index.html": "/orangelogistic/index.html",
+    "precache-manifest.70423b78a405112f7b191f75eb931843.js": "/orangelogistic/precache-manifest.70423b78a405112f7b191f75eb931843.js",
+    "service-worker.js": "/orangelogistic/service-worker.js",
+    "static/css/main.3f9d681b.chunk.css.map": "/orangelogistic/static/css/main.3f9d681b.chunk.css.map",
+    "static/js/2.81c93c2d.chunk.js.LICENSE.txt": "/orangelogistic/static/js/2.81c93c2d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4c88ba1e.js",
+    "static/js/2.81c93c2d.chunk.js",
+    "static/css/main.3f9d681b.chunk.css",
+    "static/js/main.787cd35a.chunk.js"
+  ]
+}
