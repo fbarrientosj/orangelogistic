@@ -4,15 +4,15 @@ import { List, Avatar } from 'antd';
 const data = [
   {
     title: 'Historia Instagram 1',
-    photo: require('../img/1.png')
+    photo: require('../img/min1.png')
   },
   {
     title: 'Historia Instagram 2',
-    photo: require('../img/2.png')
+    photo: require('../img/min2.png')
   },
   {
     title: 'Post Instagram 1',
-    photo: require('../img/3.png')
+    photo: require('../img/min3.png')
   }
 ];
 const Flyers = () => {

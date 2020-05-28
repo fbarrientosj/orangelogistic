@@ -185,6 +185,9 @@ const RegistrationForm = (key) => {
     return (<Spin size='large' />)
   } else {
   return (
+    <div>
+    <h1 style={{color:'green'}} class='centered' >{success ? 'Cuenta creada con éxito' : ''}</h1> 
+
     <Form
       {...formItemLayout}
       form={form}
@@ -319,13 +322,14 @@ const RegistrationForm = (key) => {
           }}
         />
       </Form.Item>
-      <b style={{color:'green'}} class='centered' >{success ? 'Cuenta creada con éxito' : ''}</b> 
+      
       <Form.Item {...tailFormItemLayout}>
         <Button type="primary" htmlType="submit" >
           Register
         </Button>
       </Form.Item>
     </Form>
+    </div>
   );
 }};
 

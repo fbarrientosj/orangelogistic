@@ -99,6 +99,8 @@ const Demo = (key) => {
   if (!loading){
   return (
     <div>
+      <h1 style={{color:'red'}} >{passwordError ? 'Contraseña o nombre erróneo' : ''}</h1> 
+      <h1 style={{color:'green'}} class='centered' >{success ? 'Pedido creado con éxito' : ''}</h1>
     <Form
       {...layout}
       name="basic"
@@ -163,7 +165,9 @@ const Demo = (key) => {
             message: 'Agrega la fecha de retiro',
           },
         ]}>
-          <DatePicker />
+          <DatePicker 
+          disabledDate={current => {
+            return  current < moment().add(-1, "day")}}/>
         </Form.Item>
 
       <Form.Item
@@ -179,8 +183,7 @@ const Demo = (key) => {
       >
         <Input.Password />
       </Form.Item>
-      <b style={{color:'red'}} >{passwordError ? 'Contraseña o nombre erróneo' : ''}</b> 
-      <b style={{color:'green'}} class='centered' >{success ? 'Pedido creado con éxito' : ''}</b> 
+       
       <Form.Item {...tailLayout}>
         <Button type="primary" htmlType="submit" style={{ textAlign: 'center' }}>
           Submit
