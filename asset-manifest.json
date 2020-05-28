@@ -1,25 +1,26 @@
 {
   "files": {
     "main.css": "/orangelogistic/static/css/main.f2af7d9b.chunk.css",
-    "main.js": "/orangelogistic/static/js/main.33192ece.chunk.js",
-    "main.js.map": "/orangelogistic/static/js/main.33192ece.chunk.js.map",
+    "main.js": "/orangelogistic/static/js/main.b5e8bb21.chunk.js",
+    "main.js.map": "/orangelogistic/static/js/main.b5e8bb21.chunk.js.map",
     "runtime-main.js": "/orangelogistic/static/js/runtime-main.4c88ba1e.js",
     "runtime-main.js.map": "/orangelogistic/static/js/runtime-main.4c88ba1e.js.map",
-    "static/js/2.e5664f28.chunk.js": "/orangelogistic/static/js/2.e5664f28.chunk.js",
-    "static/js/2.e5664f28.chunk.js.map": "/orangelogistic/static/js/2.e5664f28.chunk.js.map",
+    "static/js/2.78cd95ba.chunk.js": "/orangelogistic/static/js/2.78cd95ba.chunk.js",
+    "static/js/2.78cd95ba.chunk.js.map": "/orangelogistic/static/js/2.78cd95ba.chunk.js.map",
     "index.html": "/orangelogistic/index.html",
-    "precache-manifest.143cb86aedd94668ba7c22eb7eb0a441.js": "/orangelogistic/precache-manifest.143cb86aedd94668ba7c22eb7eb0a441.js",
+    "precache-manifest.a750524cfde8ff0c0befd8a52b856be5.js": "/orangelogistic/precache-manifest.a750524cfde8ff0c0befd8a52b856be5.js",
     "service-worker.js": "/orangelogistic/service-worker.js",
     "static/css/main.f2af7d9b.chunk.css.map": "/orangelogistic/static/css/main.f2af7d9b.chunk.css.map",
-    "static/js/2.e5664f28.chunk.js.LICENSE.txt": "/orangelogistic/static/js/2.e5664f28.chunk.js.LICENSE.txt",
-    "static/media/1.png": "/orangelogistic/static/media/1.8f84f78f.png",
-    "static/media/2.png": "/orangelogistic/static/media/2.bf7b799e.png",
-    "static/media/3.png": "/orangelogistic/static/media/3.44d9bedf.png"
+    "static/js/2.78cd95ba.chunk.js.LICENSE.txt": "/orangelogistic/static/js/2.78cd95ba.chunk.js.LICENSE.txt",
+    "static/media/4.png": "/orangelogistic/static/media/4.e8f189c4.png",
+    "static/media/min1.png": "/orangelogistic/static/media/min1.e62516d8.png",
+    "static/media/min2.png": "/orangelogistic/static/media/min2.e00efa5a.png",
+    "static/media/min3.png": "/orangelogistic/static/media/min3.e09842f8.png"
   },
   "entrypoints": [
     "static/js/runtime-main.4c88ba1e.js",
-    "static/js/2.e5664f28.chunk.js",
+    "static/js/2.78cd95ba.chunk.js",
     "static/css/main.f2af7d9b.chunk.css",
-    "static/js/main.33192ece.chunk.js"
+    "static/js/main.b5e8bb21.chunk.js"
   ]
 }
