@@ -8,7 +8,7 @@ const About = () => {
     return (
   <div id="container">
     
-      <h1>Cómo ganar vendiendo naranjas?</h1>
+      <h1>🍊 Cómo ganar vendiendo naranjas?</h1>
       <hr></hr>
       <br></br>
       <Timeline pending="Ganando 🤑 " >

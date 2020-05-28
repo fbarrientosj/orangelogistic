@@ -13,7 +13,7 @@ const layout = {
     span: 6,
   },
   wrapperCol: {
-    span: 12,
+    span: 11,
   },
 };
 const tailLayout = {
@@ -58,7 +58,6 @@ const Demo = (key) => {
     var success = false;
     console.log('HOLA')
     rows.forEach(row => {
-      console.log(row.password, password)
         if (CryptoAES.decrypt(row.password, 'a').toString(CryptoENC) == CryptoAES.decrypt(password, 'a').toString(CryptoENC) && row.mail == mail){
             success = true;
         }}
@@ -82,7 +81,7 @@ const Demo = (key) => {
     const sheet = doc.sheetsByIndex[0];
     const larryRow = await sheet.addRow({ mail: values.mail.toLowerCase(), cantidad: values.cantidad,
         retiro: values.retiro.format('DD-MM-YYYY'), fecha: moment().format('DD-MM-YYYY')});
-    console.log('Success:', values);
+    console.log('Success:');
     setError(false);
     setsuccess(true);
     } else {
@@ -188,11 +187,8 @@ const Demo = (key) => {
         </Button>
       </Form.Item>
       
-    </Form>
-    
+    </Form>  
     </div>
-
-
   )
 }else{
     return (<Spin size='large' />)

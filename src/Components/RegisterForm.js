@@ -115,7 +115,7 @@ const formItemLayout = {
       span: 5,
     },
     sm: {
-      span: 12,
+      span: 11,
     },
   },
 };
@@ -146,7 +146,7 @@ const RegistrationForm = (key) => {
     await doc.loadInfo(); // loads document properties and worksheets
     const sheet = doc.sheetsByIndex[1];
     let direccion = values.residencia.join('-')
-    var pass = CryptoAES.encrypt(values.password, 'a').toString();
+    var pass = CryptoAES.encrypt(values.password, key.encryption).toString();
     const larryRow = await sheet.addRow({ nombre: values.nombre, mail: values.mail.toLowerCase(),
         apellido: values.apellido, residencia: direccion, celular: values.celular,
          password: pass, creacion: moment().format('DD-MM-YYYY')});
