@@ -1,12 +1,15 @@
 import React, {useState} from 'react';
 import moment from 'moment';
-import { Form, Input, Button, InputNumber, AutoComplete, DatePicker, Spin, Tooltip } from 'antd';
+import { Form, Input, Button, InputNumber, AutoComplete, Cascader, Spin, Tooltip, Select } from 'antd';
 import { QuestionCircleOutlined } from '@ant-design/icons';
 import CryptoAES from 'crypto-js/aes';
 import CryptoENC from 'crypto-js/enc-utf8';
 
 
 const { GoogleSpreadsheet } = require('google-spreadsheet');
+
+
+const { Option } = Select;
 
 const layout = {
   labelCol: {
@@ -22,6 +25,49 @@ const tailLayout = {
     span: 8,
   },
 };
+
+const prefixSelector = (
+  <Form.Item name="prefix" noStyle>
+    <Select
+      style={{
+        width: 80,
+      }}
+    >
+      <Option value="+569">+569</Option>
+    </Select>
+  </Form.Item>
+);
+
+const residences = [
+  {
+    value: 'Las Condes',
+    label: 'Las Condes'
+  },
+  {
+    value: 'Lo Barnechea',
+    label: 'Lo Barnechea',
+  },
+  {
+      value: 'Providencia',
+      label: 'Providencia'
+  },
+  {
+    value: 'Ñuñoa',
+    label: 'Ñuñoa'
+},
+{
+    value: 'Vitacura',
+    label: 'Vitacura',
+},
+{
+    value: 'Peñalolén',
+    label: 'Peñalolén'
+},
+{
+    value: 'Otro',
+    label: 'Otro'
+},
+];
 
  
 
@@ -79,8 +125,11 @@ const Demo = (key) => {
 
     if (verification) {
     const sheet = doc.sheetsByIndex[0];
-    const larryRow = await sheet.addRow({ mail: values.mail.toLowerCase(), cantidad: values.cantidad,
-        retiro: values.retiro.format('DD-MM-YYYY'), fecha: moment().format('DD-MM-YYYY')});
+    let comuna_fixed = values.comuna.join('')
+    const larryRow = await sheet.addRow({ mail: values.mail.toLowerCase(), cliente: values.cliente,
+        celular: values.celular, fecha: moment().format('DD-MM-YYYY'), calle: values.calle, 
+        numero: values.numero, departamento: values.departamento, comuna: comuna_fixed,  
+        observacion: values.observacion });
     console.log('Success:');
     setError(false);
     setsuccess(true);
@@ -106,6 +155,7 @@ const Demo = (key) => {
       name="basic"
       initialValues={{
         remember: true,
+        prefix: '+569'
       }}
       onFinish={onFinish}
       onFinishFailed={onFinishFailed}
@@ -115,9 +165,124 @@ const Demo = (key) => {
       align="middle" 
       display='inline-block'
 >
-    <Form.Item
+
+      <Form.Item
+        name="cliente"
+        label="Nombre cliente"
+        
+        rules={[
+          {
+            required: true,
+            message: 'Agrega el nombre del cliente',
+          },
+        ]}
+      > 
+          <Input suffix='😊'/>
+      </Form.Item>
+
+      <Form.Item
+        name="celular"
+        label={
+          <span>
+            Teléfono de contacto&nbsp;
+            <Tooltip title="En caso de que hayan problema con la entrega">
+              <QuestionCircleOutlined />
+            </Tooltip>
+          </span>
+        }
+        rules={[
+          { min: 8, message: 'El número debe contener 8 dígitos' },
+          { max: 8, message: 'El número debe contener 8 dígitos' },
+        ]}
+      >
+        <Input
+          addonBefore={prefixSelector}
+          suffix='☎️'
+          style={{
+            width: '100%',
+          }}
+        />
+      </Form.Item>
+
+      <Form.Item
+        name="calle"
+        label="Calle"
+        
+        rules={[
+          {
+            required: true,
+            message: 'Agrega la calle del despacho',
+          },
+        ]}
+      > 
+          <Input suffix='🙇'/>
+      </Form.Item>
+
+      <Form.Item
+        label='Número de casa/edificio'
+        name="numero"
+        rules={[
+          {
+            required: true,
+            message: 'Te falta el número de la casa de despacho',
+          },
+        ]}
+      >
+        <InputNumber size='large' autoFocus={true}/>
+      </Form.Item>
+
+      <Form.Item
+        name="departamento"
+        label={
+          <span>
+            Número de departamento&nbsp;
+            <Tooltip title="Si el despacho es a una casa, déjalo vacío!">
+              <QuestionCircleOutlined />
+            </Tooltip>
+          </span>
+        }
+      > 
+          <Input suffix='🏢'/>
+      </Form.Item>
+
+      <Form.Item
+        name="comuna"
+        label={
+          <span>
+            Comuna&nbsp;
+            <Tooltip title="Si la comuna no está, no tenemos despacho :(">
+              <QuestionCircleOutlined />
+            </Tooltip>
+          </span>
+        }
+        rules={[
+          {
+            type: 'array',
+            required: true,
+            message: 'Ingresa la comuna de despacho',
+          },
+        ]}
+      >
+        <Cascader options={residences} />
+      </Form.Item>
+
+      <Form.Item
+        name="observacion"
+        label={
+          <span>
+            ¿Algún detalle extra?&nbsp;
+            <Tooltip title="Timbre malo, restricción horaria del despacho ...">
+              <QuestionCircleOutlined />
+            </Tooltip>
+          </span>
+        }
+      > 
+          <Input suffix='❗'/>
+      </Form.Item>
+
+      <Form.Item
         name="mail"
-        label="E-mail"
+        label="Tu email"
         
         rules={[
           {
@@ -132,43 +297,11 @@ const Demo = (key) => {
       > 
       
         <AutoComplete options={websiteOptions} onChange={onWebsiteChange} >
-          <Input suffix='😊'/>
+          <Input suffix='✉'/>
         </AutoComplete>
     
       </Form.Item>
-
-      <Form.Item
-        label={
-          <span>
-            Número de cajas&nbsp;
-            <Tooltip title="Máximo de 30 cajas">
-              <QuestionCircleOutlined />
-            </Tooltip>
-          </span>
-        }
-        name="cantidad"
-        rules={[
-          {
-            required: true,
-            message: 'Te falta agregar el número de cajas a pedir',
-          },
-        ]}
-      >
-        <InputNumber max={30} min={1} defaultValue={1} size='large' autoFocus={true}/>
-      </Form.Item>
-
-      <Form.Item label="Cuándo retirarás?" 
-      name="retiro"
-      rules={[
-          {
-            required: true,
-            message: 'Agrega la fecha de retiro',
-          },
-        ]}>
-          <DatePicker 
-          disabledDate={current => {
-            return  current < moment().add(-1, "day")}}/>
-        </Form.Item>
+      
 
       <Form.Item
         label="Password"

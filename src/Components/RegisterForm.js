@@ -149,7 +149,7 @@ const RegistrationForm = (key) => {
     var pass = CryptoAES.encrypt(values.password, key.encryption).toString();
     const larryRow = await sheet.addRow({ nombre: values.nombre, mail: values.mail.toLowerCase(),
         apellido: values.apellido, residencia: direccion, celular: values.celular,
-         password: pass, creacion: moment().format('DD-MM-YYYY')});
+         password: pass, creacion: moment().format('DD-MM-YYYY'), instagram : values.instagram});
     setloading(false);
     setsuccess(true);
   };
@@ -225,6 +225,19 @@ const RegistrationForm = (key) => {
         ]}
       > 
           <Input suffix='😊'/>
+      </Form.Item>
+      <Form.Item
+        name="instagram"
+        label="Instagram"
+        
+        rules={[
+          {
+            required: true,
+            message: 'Agrega tu cuenta de instagram',
+          },
+        ]}
+      > 
+          <Input suffix='✅' prefix='@'/>
       </Form.Item>
 
       <Form.Item
