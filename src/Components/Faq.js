@@ -24,7 +24,7 @@ const data = [
   }, 
   {
     title: '¿Cúando se despacharán las cajas?',
-    desc: 'Por ahora la fecha es variable. Puede ser desde el domingo 7 hasta el viernes 12. Más actualizaciones serán enviadas por interno a los vendedores dependiendo de cada pedido.'
+    desc: 'Por ahora la fecha es variable. Puede ser desde el domingo 14 de junio hasta el viernes 19 de junio. Más actualizaciones serán enviadas por interno a los vendedores dependiendo de cada pedido.'
   }, 
   {
     title: '¿Dónde encuentro flyers para promocionar las cajas?',
@@ -37,6 +37,10 @@ const data = [
   {
     title: '¿De dónde vienen las naranjas y de qué calidad son?',
     desc: 'Provienen del fundo San Antonio, ubicado en la localidad de Pichidegua (sexta región). Son de calidad exportación.'
+  }, 
+  {
+    title: '¿Recibiré comisión si la venta no se efectúa?',
+    desc: 'No. Eso sí, se el camión fue a despachar el pedido y no se efectuó la venta, se te cargarán $2000 :('
   }
 ];
 let questionmark = require('../img/4.png')

@@ -4,11 +4,11 @@ import { List, Avatar } from 'antd';
 const data = [
   {
     title: 'Historia Instagram 1',
-    photo: require('../img/min1.png')
+    photo: require('../img/1.pdf')
   },
   {
     title: 'Historia Instagram 2',
-    photo: require('../img/min2.png')
+    photo: require('../img/2.pdf')
   },
   {
     title: 'Post Instagram 1',

@@ -47,14 +47,6 @@ const residences = [
     value: 'Lo Barnechea',
     label: 'Lo Barnechea',
   },
-  {
-      value: 'Providencia',
-      label: 'Providencia'
-  },
-  {
-    value: 'Ñuñoa',
-    label: 'Ñuñoa'
-},
 {
     value: 'Vitacura',
     label: 'Vitacura',
@@ -62,11 +54,11 @@ const residences = [
 {
     value: 'Peñalolén',
     label: 'Peñalolén'
-},
+}, 
 {
-    value: 'Otro',
-    label: 'Otro'
-},
+  value: 'Chicureo',
+  label: 'Chicureo'
+}
 ];
 
  
@@ -103,8 +95,10 @@ const Demo = (key) => {
     const rows = await sheet.getRows();
     var success = false;
     console.log('HOLA')
+    
     rows.forEach(row => {
-        if (CryptoAES.decrypt(row.password, 'a').toString(CryptoENC) == CryptoAES.decrypt(password, 'a').toString(CryptoENC) && row.mail == mail){
+      
+        if (CryptoAES.decrypt(row.password, 'pass').toString(CryptoENC) === CryptoAES.decrypt(password, 'pass').toString(CryptoENC) && row.mail == mail){
             success = true;
         }}
     )
@@ -193,6 +187,10 @@ const Demo = (key) => {
         rules={[
           { min: 8, message: 'El número debe contener 8 dígitos' },
           { max: 8, message: 'El número debe contener 8 dígitos' },
+          {
+            required: true,
+            message: 'Agrega el número del cliente',
+          },
         ]}
       >
         <Input
