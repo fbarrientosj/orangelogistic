@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "972a31dd2481e87dad30b940b26e63ac",
+    "revision": "12709a3f536259765c21d0f28f18205b",
     "url": "/orangelogistic/index.html"
   },
   {
-    "revision": "f2e63a74b34dfba74868",
+    "revision": "ef0efb89667a8a9b481f",
     "url": "/orangelogistic/static/css/main.f2af7d9b.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/orangelogistic/static/js/2.ce5ad06c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f2e63a74b34dfba74868",
-    "url": "/orangelogistic/static/js/main.fdd920c2.chunk.js"
+    "revision": "ef0efb89667a8a9b481f",
+    "url": "/orangelogistic/static/js/main.d045e1a2.chunk.js"
   },
   {
     "revision": "552ffe230046aca3602e",
