@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/orangelogistic/static/css/main.f2af7d9b.chunk.css",
-    "main.js": "/orangelogistic/static/js/main.118fbd73.chunk.js",
-    "main.js.map": "/orangelogistic/static/js/main.118fbd73.chunk.js.map",
+    "main.js": "/orangelogistic/static/js/main.fdd920c2.chunk.js",
+    "main.js.map": "/orangelogistic/static/js/main.fdd920c2.chunk.js.map",
     "runtime-main.js": "/orangelogistic/static/js/runtime-main.4c88ba1e.js",
     "runtime-main.js.map": "/orangelogistic/static/js/runtime-main.4c88ba1e.js.map",
     "static/js/2.ce5ad06c.chunk.js": "/orangelogistic/static/js/2.ce5ad06c.chunk.js",
     "static/js/2.ce5ad06c.chunk.js.map": "/orangelogistic/static/js/2.ce5ad06c.chunk.js.map",
     "index.html": "/orangelogistic/index.html",
-    "precache-manifest.b04268c59653b4275e9a5d23e0a154c3.js": "/orangelogistic/precache-manifest.b04268c59653b4275e9a5d23e0a154c3.js",
+    "precache-manifest.5808fc7f6abc56777afd9a9ed4422ff3.js": "/orangelogistic/precache-manifest.5808fc7f6abc56777afd9a9ed4422ff3.js",
     "service-worker.js": "/orangelogistic/service-worker.js",
     "static/css/main.f2af7d9b.chunk.css.map": "/orangelogistic/static/css/main.f2af7d9b.chunk.css.map",
     "static/js/2.ce5ad06c.chunk.js.LICENSE.txt": "/orangelogistic/static/js/2.ce5ad06c.chunk.js.LICENSE.txt",
@@ -21,6 +21,6 @@
     "static/js/runtime-main.4c88ba1e.js",
     "static/js/2.ce5ad06c.chunk.js",
     "static/css/main.f2af7d9b.chunk.css",
-    "static/js/main.118fbd73.chunk.js"
+    "static/js/main.fdd920c2.chunk.js"
   ]
 }

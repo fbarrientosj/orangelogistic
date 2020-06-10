@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/orangelogistic/precache-manifest.b04268c59653b4275e9a5d23e0a154c3.js"
+  "/orangelogistic/precache-manifest.5808fc7f6abc56777afd9a9ed4422ff3.js"
 );
 
 self.addEventListener('message', (event) => {
