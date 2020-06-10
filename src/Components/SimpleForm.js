@@ -98,7 +98,7 @@ const Demo = (key) => {
     
     rows.forEach(row => {
       
-        if (CryptoAES.decrypt(row.password, 'pass').toString(CryptoENC) === CryptoAES.decrypt(password, 'pass').toString(CryptoENC) && row.mail == mail){
+        if (row.mail == mail){
             success = true;
         }}
     )
