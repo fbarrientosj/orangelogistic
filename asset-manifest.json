@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/orangelogistic/static/css/main.f2af7d9b.chunk.css",
-    "main.js": "/orangelogistic/static/js/main.b55694ce.chunk.js",
-    "main.js.map": "/orangelogistic/static/js/main.b55694ce.chunk.js.map",
+    "main.js": "/orangelogistic/static/js/main.f4a6d8bb.chunk.js",
+    "main.js.map": "/orangelogistic/static/js/main.f4a6d8bb.chunk.js.map",
     "runtime-main.js": "/orangelogistic/static/js/runtime-main.4c88ba1e.js",
     "runtime-main.js.map": "/orangelogistic/static/js/runtime-main.4c88ba1e.js.map",
-    "static/js/2.30626a2b.chunk.js": "/orangelogistic/static/js/2.30626a2b.chunk.js",
-    "static/js/2.30626a2b.chunk.js.map": "/orangelogistic/static/js/2.30626a2b.chunk.js.map",
+    "static/js/2.af2f86b5.chunk.js": "/orangelogistic/static/js/2.af2f86b5.chunk.js",
+    "static/js/2.af2f86b5.chunk.js.map": "/orangelogistic/static/js/2.af2f86b5.chunk.js.map",
     "index.html": "/orangelogistic/index.html",
-    "precache-manifest.d304a4086c6c46c3f9d4fc7d824f8f48.js": "/orangelogistic/precache-manifest.d304a4086c6c46c3f9d4fc7d824f8f48.js",
+    "precache-manifest.a7ec262eb84c662938680410b8241195.js": "/orangelogistic/precache-manifest.a7ec262eb84c662938680410b8241195.js",
     "service-worker.js": "/orangelogistic/service-worker.js",
     "static/css/main.f2af7d9b.chunk.css.map": "/orangelogistic/static/css/main.f2af7d9b.chunk.css.map",
-    "static/js/2.30626a2b.chunk.js.LICENSE.txt": "/orangelogistic/static/js/2.30626a2b.chunk.js.LICENSE.txt",
+    "static/js/2.af2f86b5.chunk.js.LICENSE.txt": "/orangelogistic/static/js/2.af2f86b5.chunk.js.LICENSE.txt",
     "static/media/1.pdf": "/orangelogistic/static/media/1.409476e9.pdf",
     "static/media/2.pdf": "/orangelogistic/static/media/2.5e904b6a.pdf",
     "static/media/4.png": "/orangelogistic/static/media/4.e8f189c4.png",
@@ -19,8 +19,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.4c88ba1e.js",
-    "static/js/2.30626a2b.chunk.js",
+    "static/js/2.af2f86b5.chunk.js",
     "static/css/main.f2af7d9b.chunk.css",
-    "static/js/main.b55694ce.chunk.js"
+    "static/js/main.f4a6d8bb.chunk.js"
   ]
 }
