@@ -90,10 +90,9 @@ const Demo = (key) => {
     
     const rows = await sheet.getRows();
     var success = false;
-    console.log('HOLA')
     
     rows.forEach(row => {
-      
+        console.log(row.mail)
         if (row.mail == mail){
             success = true;
         }}
