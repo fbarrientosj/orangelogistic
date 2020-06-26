@@ -1,26 +1,29 @@
 {
   "files": {
     "main.css": "/orangelogistic/static/css/main.f2af7d9b.chunk.css",
-    "main.js": "/orangelogistic/static/js/main.f4a6d8bb.chunk.js",
-    "main.js.map": "/orangelogistic/static/js/main.f4a6d8bb.chunk.js.map",
+    "main.js": "/orangelogistic/static/js/main.d9855b6d.chunk.js",
+    "main.js.map": "/orangelogistic/static/js/main.d9855b6d.chunk.js.map",
     "runtime-main.js": "/orangelogistic/static/js/runtime-main.4c88ba1e.js",
     "runtime-main.js.map": "/orangelogistic/static/js/runtime-main.4c88ba1e.js.map",
-    "static/js/2.af2f86b5.chunk.js": "/orangelogistic/static/js/2.af2f86b5.chunk.js",
-    "static/js/2.af2f86b5.chunk.js.map": "/orangelogistic/static/js/2.af2f86b5.chunk.js.map",
+    "static/js/2.325e471f.chunk.js": "/orangelogistic/static/js/2.325e471f.chunk.js",
+    "static/js/2.325e471f.chunk.js.map": "/orangelogistic/static/js/2.325e471f.chunk.js.map",
     "index.html": "/orangelogistic/index.html",
-    "precache-manifest.a7ec262eb84c662938680410b8241195.js": "/orangelogistic/precache-manifest.a7ec262eb84c662938680410b8241195.js",
+    "precache-manifest.105a925b4412259c8a12b21941d86bd0.js": "/orangelogistic/precache-manifest.105a925b4412259c8a12b21941d86bd0.js",
     "service-worker.js": "/orangelogistic/service-worker.js",
     "static/css/main.f2af7d9b.chunk.css.map": "/orangelogistic/static/css/main.f2af7d9b.chunk.css.map",
-    "static/js/2.af2f86b5.chunk.js.LICENSE.txt": "/orangelogistic/static/js/2.af2f86b5.chunk.js.LICENSE.txt",
-    "static/media/1.pdf": "/orangelogistic/static/media/1.409476e9.pdf",
-    "static/media/2.pdf": "/orangelogistic/static/media/2.5e904b6a.pdf",
+    "static/js/2.325e471f.chunk.js.LICENSE.txt": "/orangelogistic/static/js/2.325e471f.chunk.js.LICENSE.txt",
     "static/media/4.png": "/orangelogistic/static/media/4.e8f189c4.png",
-    "static/media/min3.png": "/orangelogistic/static/media/min3.e09842f8.png"
+    "static/media/blood.jpg": "/orangelogistic/static/media/blood.787bce20.jpg",
+    "static/media/c1.png": "/orangelogistic/static/media/c1.8988c402.png",
+    "static/media/c2.png": "/orangelogistic/static/media/c2.caa854f8.png",
+    "static/media/c3.png": "/orangelogistic/static/media/c3.2b8f4590.png",
+    "static/media/c4.jpg": "/orangelogistic/static/media/c4.6a0623b1.jpg",
+    "static/media/c5.jpg": "/orangelogistic/static/media/c5.33770068.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.4c88ba1e.js",
-    "static/js/2.af2f86b5.chunk.js",
+    "static/js/2.325e471f.chunk.js",
     "static/css/main.f2af7d9b.chunk.css",
-    "static/js/main.f4a6d8bb.chunk.js"
+    "static/js/main.d9855b6d.chunk.js"
   ]
 }
