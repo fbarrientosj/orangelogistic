@@ -14,7 +14,7 @@
     "framer-motion": "^1.11.0",
     "google-spreadsheet": "^3.0.11",
     "googleapis": "^39.2.0",
-    "moment": "^2.26.0",
+    "moment": "^2.29.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-hook-form": "^5.7.2",
